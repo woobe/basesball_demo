@@ -55,7 +55,8 @@ dbDisconnect(conn)
 # Merging with Master
 # ------------------------------------------------------------------------------
 
-load(file = "local_data.rda")
+# If using local data
+# load(file = "local_data.rda")
 
 d_bat_munged = merge(d_master, d_bat,
                      by.x = "playerID", by.y = "playerID", all.y = TRUE)
@@ -157,13 +158,4 @@ d_pitch_avg =
             avg_SF = mean(SF, na.rm = TRUE),
             avg_GIDP = mean(GIDP, na.rm = TRUE)
   )
-
-
-
-
-
-
-
-
-
 
